@@ -1,5 +1,6 @@
 import TurbolinksAdapter from 'vue-turbolinks';
 import Vue from 'vue/dist/vue.esm'
+import vueSlider from 'vue-slider-component'
 
 Vue.use(TurbolinksAdapter)
 
@@ -16,19 +17,19 @@ document.addEventListener('turbolinks:load', () => {
 
     const app = new Vue({
       el: element,
+      components: {
+        vueSlider
+      },
       data: {
         open: false,
         gender: gender,
         married: married,
-        age: 50,
-        home_owner: home_owner,
+        age: age,
+        home_owner: home_owner
       },
       methods: {
         toggle_open() {
           this.open = !this.open
-        },
-        set_age(){
-          console.log(this.age)
         }
       }
     })

@@ -13,8 +13,3 @@
 //= require rails-ujs
 //= require turbolinks
 //= require theme
-//= require bootstrap-slider
-
-$(document).ready(function(){
-  $('.slider').slider();
-});

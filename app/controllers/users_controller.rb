@@ -3,7 +3,7 @@ class UsersController < ApplicationController
     @core_info = {
       gender: '',
       married: false,
-      age: '',
+      age: 0,
       home_owner: false
     }
   end
