@@ -10,40 +10,9 @@
 
     p You will be able to perform many simulations with high degree of flexibility.  But this data remains constant as it your starting positon.
 
-    button.btn.btn-primary.full-width aria-controls="CoreDataAboutMe" aria-expanded="false" data-target="#CoreDataAboutMe" data-toggle="collapse" type="button"
-      | Some core data about me - a 20 seccond job
-    #CoreDataAboutMe.collapse
-      .row.padding-20
-        .col-md-2
-          h6 Gender
-        .col-md-4
-          .row.text-center
-            .col-md-12
-              span.fa.fa-male.fa-4x.icon-border.margin-side-10
-              span.fa.fa-female.fa-4x.icon-border.margin-side-10
-            .col-md-12
-              p.text-muted Why do you want to know this?
-        .col-md-2
-          h6 Marital Status
-        .col-md-4
-          .col-md-12
-            span.fa.fa-female.fa-4x.icon-border.margin-side-10
-            span.fa.fa-venus-double.fa-4x.icon-border.margin-side-10
-          .col-md-12
-            p.text-muted Why do you want to know this?
-
-      .row.padding-20
-        .col-md-2
-          h6 Your Age
-        .col-md-8
-          input type="text" class="span2 slider" value="" data-slider-min="18" data-slider-max="100" data-slider-step="1" data-slider-value="-14" data-slider-orientation="horizontal" data-slider-selection="after"data-slider-tooltip="hide"
-
-      .row.padding-20
-        .col-md-2
-          h6 Do you own a home
-        .col-md-4
-          span.fa.fa-home.fa-4x.icon-border
-
+    = tag.div id: :core_info_form,
+        data: { core_info: @core_info.to_json }
+      = render 'core_info'
 
     button.btn.btn-primary.full-width.margin-top-20 aria-controls="WhatIOwn" aria-expanded="false" data-target="#WhatIOwn" data-toggle="collapse" type="button"
       | What I Own

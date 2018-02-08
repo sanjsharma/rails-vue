@@ -1,0 +1,37 @@
+= content_for :page_header
+  = javascript_pack_tag 'core_info_form'
+
+button.btn.btn-primary.full-width aria-controls="CoreDataAboutMe" aria-expanded="false" data-target="#CoreDataAboutMe" data-toggle="collapse" type="button" v-on:click="toggle_open()"
+  | Some core data about me - {{ open ? 'close' : 'a 20 seccond job' }}
+
+#CoreDataAboutMe.collapse
+  .row.padding-20
+    .col-md-2
+      h6 Gender
+    .col-md-4
+      .row.text-center
+        .col-md-12
+          span.fa.fa-male.fa-4x.icon-border.margin-side-10 :class="gender === 'male' ? 'active' : ''" @click="gender='male'"
+          span.fa.fa-female.fa-4x.icon-border.margin-side-10 :class="gender === 'female' ? 'active' : ''" @click="gender='female'"
+        .col-md-12
+          p.text-muted Why do you want to know this?
+    .col-md-2
+      h6 Marital Status
+    .col-md-4
+      .col-md-12
+        span.fa.fa-4x.icon-border.margin-side-10 :class="[gender === 'female' ? 'fa-female' : 'fa-male', married ? '' : 'active']" @click="married=false"
+        span.fa.fa-venus-double.fa-4x.icon-border.margin-side-10 :class="married ? 'active' : ''" @click="married=true"
+      .col-md-12
+        p.text-muted Why do you want to know this?
+
+  .row.padding-20
+    .col-md-2
+      h6 Your Age
+    .col-md-8
+      input type="text" class="span2 slider" value="" data-slider-min="18" data-slider-max="100" data-slider-step="1" data-slider-value="-14" data-slider-orientation="horizontal" data-slider-selection="after"data-slider-tooltip="hide" @keyup.enter="set_age()" v-model="age"
+
+  .row.padding-20
+    .col-md-2
+      h6 Do you own a home
+    .col-md-4
+      span.fa.fa-home.fa-4x.icon-border :class="home_owner ? 'active' : ''" @click="home_owner=!home_owner"

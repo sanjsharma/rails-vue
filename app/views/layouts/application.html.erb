@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>MonteCarloUi</title>
+    <title>Retirement Planner</title>
 
     <meta charset="utf-8" />
     <%= favicon_link_tag 'img/favicon.ico', rel: "icon", type: "image/png" %>
@@ -17,6 +17,8 @@
 
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag params[:controller] if javascript_file?(params[:controller]) %>
+
+    <% yield :vue_pack %>
 
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
   </head>
