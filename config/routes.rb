@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'users/index'
+
   get 'pages/dashboard'
   get 'pages/user'
   get 'pages/table'

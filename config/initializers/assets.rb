@@ -15,3 +15,6 @@ Rails.application.config.assets.paths << Rails.root.join('node_modules')
 
 # precompile all theme assets
 Rails.application.config.assets.precompile += %w(theme.css theme.js img/* img/**/*)
+
+Rails.application.config.assets.precompile += %w( users.css )
+Rails.application.config.assets.precompile += %w( users.js )

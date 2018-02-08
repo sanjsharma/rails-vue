@@ -1,0 +1,62 @@
+= content_for :page_header
+  a class="navbar-brand" href="/dashboard"
+    | Core Information
+
+.row
+  .col-md-12
+    h3.text-center Your Core Information
+
+    p This section allows you to set up a core of your personal and financial position.  This information is used to help you understand if you can afford the things you would like to spend your money on.
+
+    p You will be able to perform many simulations with high degree of flexibility.  But this data remains constant as it your starting positon.
+
+    button.btn.btn-primary.full-width aria-controls="CoreDataAboutMe" aria-expanded="false" data-target="#CoreDataAboutMe" data-toggle="collapse" type="button"
+      | Some core data about me - a 20 seccond job
+    #CoreDataAboutMe.collapse
+      .row.padding-20
+        .col-md-2
+          h6 Gender
+        .col-md-4
+          .row.text-center
+            .col-md-12
+              span.fa.fa-male.fa-4x.icon-border.margin-side-10
+              span.fa.fa-female.fa-4x.icon-border.margin-side-10
+            .col-md-12
+              p.text-muted Why do you want to know this?
+        .col-md-2
+          h6 Marital Status
+        .col-md-4
+          .col-md-12
+            span.fa.fa-female.fa-4x.icon-border.margin-side-10
+            span.fa.fa-venus-double.fa-4x.icon-border.margin-side-10
+          .col-md-12
+            p.text-muted Why do you want to know this?
+
+      .row.padding-20
+        .col-md-2
+          h6 Your Age
+        .col-md-8
+          input type="text" class="span2 slider" value="" data-slider-min="18" data-slider-max="100" data-slider-step="1" data-slider-value="-14" data-slider-orientation="horizontal" data-slider-selection="after"data-slider-tooltip="hide"
+
+      .row.padding-20
+        .col-md-2
+          h6 Do you own a home
+        .col-md-4
+          span.fa.fa-home.fa-4x.icon-border
+
+
+    button.btn.btn-primary.full-width.margin-top-20 aria-controls="WhatIOwn" aria-expanded="false" data-target="#WhatIOwn" data-toggle="collapse" type="button"
+      | What I Own
+    #WhatIOwn.collapse.
+      .row.padding-20.text-center
+        button.btn.btn-primary.margin-side-10
+          | Simple
+
+        button.btn.btn-primary.margin-side-10
+          | More Complex
+
+    button.btn.btn-primary.full-width.margin-top-20
+      | Go to simulations based on your investment decisions
+
+    button.btn.btn-primary.full-width.margin-top-20
+      | Go to simulations comparing superannuation funds
