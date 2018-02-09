@@ -27,6 +27,11 @@ document.addEventListener('turbolinks:load', () => {
         age: age,
         home_owner: home_owner
       },
+      updated() {
+        this.$nextTick(function () {
+          this.$refs.slider.refresh()
+        })
+      },
       methods: {
         toggle_open() {
           this.open = !this.open
