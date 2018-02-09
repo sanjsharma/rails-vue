@@ -1,4 +1,6 @@
 class IndividualsController < ApplicationController
+  before_action :authenticate_user!
+
   def index
     @core_info = {
       gender: '',
