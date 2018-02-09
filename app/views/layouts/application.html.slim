@@ -1,0 +1,35 @@
+doctype html
+html[lang="en"]
+  head
+    title
+      | Retirement Planner
+    meta[charset="utf-8"]
+    = favicon_link_tag 'img/favicon.ico', rel: "icon", type: "image/png"
+    meta[http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"]
+    meta[content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"]
+    meta[name="viewport" content="width=device-width"]
+
+    = csrf_meta_tags
+
+    = yield :vue_pack
+
+    = stylesheet_link_tag  'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = stylesheet_link_tag params[:controller], media: 'all' if stylesheets_file?(params[:controller])
+
+    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+    = javascript_include_tag params[:controller] if javascript_file?(params[:controller])
+
+    link[href="http://fonts.googleapis.com/css?family=Roboto:400,700,300" rel="stylesheet" type="text/css"]
+
+  body
+    .notifications.top-right
+    = render "layouts/shared/notify"
+
+    .wrapper
+      = render 'layouts/shared/sidebar'
+      .main-panel
+        = render 'layouts/shared/navbar'
+        .content
+          .container-fluid
+            = yield
+  = yield :javascript
