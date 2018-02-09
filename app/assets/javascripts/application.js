@@ -13,3 +13,6 @@
 //= require rails-ujs
 //= require turbolinks
 //= require theme
+//= require rails.validations
+//= require rails.validations.simple_form
+//= require nested_form_fields
