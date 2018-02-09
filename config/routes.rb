@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  get 'users/index'
 
   get 'pages/dashboard'
   get 'pages/user'
@@ -8,5 +7,6 @@ Rails.application.routes.draw do
   get 'pages/icons'
   get 'pages/notifications'
 
+  get 'individuals/index'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
