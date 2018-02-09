@@ -22,14 +22,17 @@ html[lang="en"]
     link[href="http://fonts.googleapis.com/css?family=Roboto:400,700,300" rel="stylesheet" type="text/css"]
 
   body
-    .notifications.top-right
-    = render "layouts/shared/notify"
+    - flash.each do |key, value|
+      = render "layouts/shared/notify", type: key, notice: value
 
     .wrapper
-      = render 'layouts/shared/sidebar'
-      .main-panel
-        = render 'layouts/shared/navbar'
-        .content
-          .container-fluid
-            = yield
+      - if user_signed_in?
+        = render 'layouts/shared/sidebar'
+        .main-panel
+          = render 'layouts/shared/navbar'
+          .content
+            .container-fluid
+              = yield
+      - else
+        = yield
   = yield :javascript

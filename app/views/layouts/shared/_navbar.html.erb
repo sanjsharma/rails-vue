@@ -68,9 +68,9 @@
           </ul>
         </li>
         <li>
-          <a href="#">
+          <%= link_to(destroy_user_session_path, :method => :delete) do %>
             <p>Log out</p>
-          </a>
+          <% end %>
         </li>
         <li class="separator hidden-lg hidden-md"></li>
       </ul>

@@ -1,4 +1,4 @@
-class UsersController < ApplicationController
+class IndividualsController < ApplicationController
   def index
     @core_info = {
       gender: '',
@@ -13,7 +13,7 @@ class UsersController < ApplicationController
         superannuation: 123,
         shares: 12,
         property: 12,
-        debt: 12
+        debt: 12,
         other: 12
       },
       complex: {

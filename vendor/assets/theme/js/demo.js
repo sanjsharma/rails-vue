@@ -242,21 +242,19 @@ demo = {
         marker.setMap(map);
     },
 
-	showNotification: function(from, align){
-    	color = Math.floor((Math.random() * 4) + 1);
+	showNotification: function(type, message){
+  	$.notify({
+      	icon: "pe-7s-bell",
+      	message: message
 
-    	$.notify({
-        	icon: "pe-7s-gift",
-        	message: "Welcome to <b>Light Bootstrap Dashboard</b> - a beautiful freebie for every web developer."
-
-        },{
-            type: type[color],
-            timer: 4000,
-            placement: {
-                from: from,
-                align: align
-            }
-        });
+      },{
+          type: type,
+          timer: 4000,
+          placement: {
+              from: 'top',
+              align: 'right'
+          }
+      });
 	}
 
 
